@@ -1,0 +1,27 @@
+<label>{{name}}</label> 
+<p>server with Id {{serverId}} is {{getserverStatus()}}</p>
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button><!--- event binding-->
+<!-- <img [src]="imgUrl"style="height:30px;margin-top:5px"> -->
+<div>{{serverCreationStatus}}</div>
+<div>
+    Two Way Data-Binding Example:
+</div>
+<div>
+    <input type="text" [(ngModel)]="serverName">
+</div>
+{{serverName}}
+<div>
+    <p class="bind"><b>Data Binding Assignment</b></p>
+</div>
+<div>
+    <input type="text" [(ngModel)]="userName">
+</div>
+{{userName}}
+
+<div class="a1">
+    <input type="reset" class="btn" (click)="empty()">
+    {{userNameStatus}}
+    
+<!-- <button class="btn">Reset</button> -->
+<span class="p1"> - Once user click on Reset button textbox is empty</span>
+</div>

@@ -1,0 +1,20 @@
+.bind{
+    background-color: rgb(168, 72, 72);
+    color: white;
+    text-align: center;
+    padding: 13px;
+    font-size: 22px;
+}
+.p1{
+    margin-left: 9px;
+   
+}
+.btn{
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: aquamarine;
+    font-weight: bold;
+}
