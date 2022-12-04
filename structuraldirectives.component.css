@@ -1,0 +1,54 @@
+.b1{
+    background-color: rgb(176, 122, 226);
+    text-align: center;
+    padding: 15px;
+    font-weight: bolder;
+}
+.d1{
+    background-color: rgb(231, 79, 163);
+}
+.p1{
+    background-color: rgb(146, 216, 132);
+    margin-left: 0px;
+    font-weight: bold;
+    padding: 4px;
+}
+.s1{
+    color:  yellow;
+    font-weight: bold;
+    font-size: 21px;
+}
+.p2{
+    background-color: rgb(146, 216, 132);
+    margin-left: 50px;
+    font-weight: bold;
+    padding: 4px;
+}
+.t1{
+    background-color:rgb(176, 122, 226);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 21px;
+    padding: 15px;
+    color: black;
+}
+thead tr th{
+    color: rgb(49, 4, 253);
+    font-weight: bolder;
+}
+tbody tr td{
+    color: white;
+    font-weight: bold;
+}
+.t3 tr td{
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+}
+.c1{
+    background-image: url('C:\Users\Smart\Desktop\Angular\databinding\angularcomponent\src\assets\bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    background-blend-mode: multiply;
+   float: left;
+}

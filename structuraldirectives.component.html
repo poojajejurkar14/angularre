@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="l1">
+                    <h4 class="b1">Structural Directives Assignment</h4>
+                    <div class="d1">
+                        <p class="p1">*ngIf Structural Directives Example</p>
+
+                        <input type="checkbox" *ngIf="info" style="margin-left: 50px;" (click)="infoo()"><span
+                            class="m-2 s1">Click here
+                            to cancel the information</span>
+
+                        <p class="p2">{{info}}</p>
+                    </div>
+                </div>
+                <div class="t1 col-md-12">{{title}}</div>
+                <table class="table col-md-12">
+
+                    <thead>
+                        <tr>
+                            <th>Courses</th>
+                            <th>Fees</th>
+                            <th>Duration</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="t3">
+                        <tr *ngFor="let cours of course;let i=index">
+                            <td>{{i+1}}</td>
+
+                            <td>{{cours.courses}}</td>
+                            <td>{{cours.fees}}</td>
+                            <td>{{cours.duration}}</td>
+                            <td>{{cours.salary}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 c1">
+            <div class="row">
+                <div class="col-md-9 m-5">
+                    <select class="form-control align-center" (change)="getActorImage($event)">
+                        <option value="Default" class="align-center">Select TV serial actors names.</option>
+                        <option value="Akshara" class="align-center">Akshara</option>
+                        <option value="Jivika">Jivika</option>
+                        <option value="Misti">Misti</option>
+                        <option value="Avni">Avni</option>
+                    </select>
+                </div>
+                <div class="col-md-12 align-center" [ngSwitch]="selectedActor">
+                    <h2 class="text-dark fw-bold " *ngSwitchCase="'Select actors'">Select actors</h2>
+                    <h2 class="text-dark " *ngSwitchCase="'Akshara'">Akshara</h2>
+                    <h2 class="text-dark" *ngSwitchCase="'Jivika'">Jivika</h2>
+                    <h2 class="text-dark" *ngSwitchCase="'Misti'">Misti</h2>
+                    <h2 class="text-dark" *ngSwitchCase="'Avni'">Avni</h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
