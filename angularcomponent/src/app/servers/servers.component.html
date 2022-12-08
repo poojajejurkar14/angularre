@@ -1,6 +1,6 @@
 <label>{{name}}</label> 
 <p>server with Id {{serverId}} is {{getserverStatus()}}</p>
-<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button><!--- event binding-->
+<button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary">Add Server</button><!--- event binding-->
 <!-- <img [src]="imgUrl"style="height:30px;margin-top:5px"> -->
 <div>{{serverCreationStatus}}</div>
 <div>
@@ -12,6 +12,7 @@
 {{serverName}}
 <div>
     <p class="bind"><b>Data Binding Assignment</b></p>
+    
 </div>
 <div>
     <input type="text" [(ngModel)]="userName">
@@ -19,7 +20,7 @@
 {{userName}}
 
 <div class="a1">
-    <input type="reset" class="btn" (click)="empty()">
+    <input type="reset" class="btn btn-primary" (click)="empty()">
     {{userNameStatus}}
     
 <!-- <button class="btn">Reset</button> -->

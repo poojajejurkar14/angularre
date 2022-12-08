@@ -1,0 +1,58 @@
+<div [ngStyle]="{'color':colorVal,'background-color':'#ddd'}">Learning angular 8</div>
+<!--add one or more valuse -->
+<h4>Ng Class</h4>
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success':person.country==='UK',
+        'text-primary':person.country==='USA',
+        'text-danger':person.country==='India'
+    }">
+        {{person.name}}({{person.country}})</li>
+</ul>
+<p>Normal Paragraph</p>
+<p appCustomdirective>Custom Paragraph</p>
+<div appCustomdirective>Custom directive div</div>
+
+<!-- Assignment -->
+<div>
+    <h2 class="text-center mt-5 bg-secondary">Directive Assignment</h2>
+</div>
+<div class="container">
+
+    <div class="row text-center">
+        <div class="col-md-6  bg-secondary">
+            <h4 class="p-2">Attribute Directive</h4>
+            <p class="font-weight-bold">Most popular position in IT</p>
+            <ul>
+                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Software Engineer</li>
+                <li class="text-left p-2 text-white font-weight-bold">Product Manager</li>
+                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Full-stack Developer </li>
+                <li class="text-left p-2 text-white font-weight-bold">Database Manager</li>
+                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Devops Engineer</li>
+            </ul>
+        </div>
+        <div class="col-md-6 heading">
+            <h4 class="p-2">Custom Directive</h4>
+            <table>
+                <tr>
+                    <td>
+                    <label><b>Password :</b></label>
+                    </td>
+                </tr>
+                <tr>
+                    <input type="password" class="col-md-12 s1">
+                </tr>
+                <tr>
+                    <label class="c1"><b>Confirm Password :</b></label>
+                </tr>
+                <tr>
+                    <input type="password" appConfirmValidation="password" class="col-md-12 s1">
+                    <!-- <span>not match</span> -->
+                </tr>
+                <tr>
+                    <input type="submit" class="text-center p-2 mt-3 s2">
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
