@@ -1,0 +1,152 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6  text-center rounded shadow py-5">
+            <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm" class="aligh-center">
+                <table>
+                    <tr class="col-md-12  r1">
+                        <td>
+                            <h4 class="fw-bold col-md-12 p5">Registration</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group col-md-12 mt-2">
+                                <label for="username">First name</label>
+                                <input type="text" class="form-control" maxlength="5" minlength="5" id="firstname"
+                                    name="firstname" required placeholder="John" #firstname="ngModel" ngModel>
+                                <small class="text-danger" *ngIf="!firstname.valid && firstname.touched">Please enter
+                                    only maximum 5 characters.</small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-md-12 mt-2">
+                                <label for="exampleInputEmail1">Last name</label>
+                                <input type="email" class="form-control" #lastname="ngModel"  maxlength="10" id="lastname"
+                                    name="lastname" required placeholder="Smit" ngModel>
+                                <small class="text-danger" *ngIf="!lastname.valid && lastname.touched">Please enter
+                                    only maximum 10 characters.</small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group col-md-12">
+                                <label for="username">Age</label>
+                                <input type="number" class="form-control"  #age="ngModel" id="age" name="age" required placeholder="12" pattern="[17-9]{2}" 
+                                    ngModel>
+                               
+                                <small class="text-danger" *ngIf="!age.valid && age.touched"><small *ngIf="!age.pattern">Please enter age between 17 to 20.</small> </small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-md-12">
+                                <label for="exampleInputEmail1">Work email</label>
+                                <input type="email" class="form-control col-12" id="email" #email="ngModel" name="email" email 
+                                    placeholder="John Smit@gamil.com" required ngModel>
+                                    <small class="text-danger" *ngIf="!email.valid && email.touched">Enter valid email address</small>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group col-md-12">
+                                <label for="phonenumber">Phone number</label>
+                                 <input type="number" class="form-control"   maxlength="10"
+                                    #phonenumber="ngModel" id="phonenumber" name="phonenumber" pattern="[0-9]{10}"  required
+                                    placeholder="00 000 00000" ngModel>
+                                <small class="text-danger" *ngIf="!phonenumber.valid && phonenumber.touched"><small *ngIf="!phonenumber.pattern"> Please
+                                    enter only 10 digit phonenumber.</small> </small> 
+                                    
+                                    
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="form-group col-md-12" >
+                                <label for="city">City<span class="text-muted fw-light"> [Optional]</span></label>
+                                <select name="city" class="form-control" id="city" [ngModel]="defaultValue">
+                                    <option value="Manjeri">Manjeri</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Delhi">Delhi</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px dashed gray;">
+                        <td>
+                            <div class="form-group col-md-12" >
+                                <label for="">Gender:</label><br>
+                                <div class="form-check form-check-inline col-md-4">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Male</label>
+    
+                                    <input class="form-check-input col-md-4" type="radio" name="inlineRadioOptions"  selected id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                  
+                                    <input class="form-check-input col-md-4" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+                                    <label class="form-check-label" for="inlineRadio3">Other</label>
+                                
+                                
+                              </div>
+                              </div>
+                             
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px dashed gray;">
+                        <td >
+                            <div class="form-group col-md-12 mt-2">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required
+                                    ngModel>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-md-12 mt-2">
+                                <label for="exampleInputEmail1" class="text-dark">Confirm password</label>
+                                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required
+                                    ngModel>
+                                <!-- <small class="text-danger" >password is not matched</small> -->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="col-md-12" style="margin: 10px;">
+                        <td>
+                            <div class="form-check col-md-12 mt-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I agree with <span class="text-primary">terms and conditions</span></label>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="col-md-12 mt-3">
+                                <button type="register" [disabled]="!myForm.valid"
+                                    class="btn btn-primary">Register</button>
+                                    
+                            </div>
+
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</div> 
+
+<!-- <form action="" #passwordvalidation="ngForm" (ngSwitch)="pasSubmit()" >
+<div>
+    <label for="">Password</label>
+    <input type="text" placeholder="password" name="password" [(ngModel)]="registerArray.password"
+    [pattern]="passwordPtn" #password="ngModel" minlength="8" maxlength="12" required>
+    <span class="text-danger" *ngIf="(password.touched || passwordvalidation.submitted && password.error?.required)">password required</span>
+    <span class="text-danger" *ngIf="(password.touched || passwordvalidation.submitted && password.error?.pattern)">password must be 18 to 16 characters & contain letter,number,symbols</span>
+</div>
+<div>
+    <label for="">Confirm Password</label>
+    <input type="text" placeholder="enter the confirmpassword" name="confirmpassword" [(ngModel)]="registerArray.confirmpassword" #confirmpassword="ngModel" minlength="8" maxlength="12" required>
+</div>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form> -->

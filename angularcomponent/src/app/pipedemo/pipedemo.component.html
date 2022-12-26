@@ -1,0 +1,28 @@
+<p>pipedemo works!</p>
+<div>
+     <!-- transform the data / parameter pn deu shakto /'shortDate/'m/dd/yyyy'/'fullDate'/uppercase-->
+     Today's Date: {{todaysdate | date:'fullDate' | lowercase}}    
+</div>
+<div>
+    get values: {{obser |async}}
+</div>
+<div>
+    Currency :
+    <div>  <!-- convert krun dete fkt currency-->
+        <!-- {{price | currency:'INR'}}
+        <br>
+        {{price | currency:'$'}}
+        <br>
+        {{price | currency:'EUR'}}
+        <br>
+        {{price | number}}
+        <br>-->
+        <!-- convert js obj to json string -->
+        <!-- {{obj | json}} --> 
+
+        
+
+        <!-- Apply custom pipe and advantage is reusability-->
+        {{price | count}}
+    </div>
+</div>

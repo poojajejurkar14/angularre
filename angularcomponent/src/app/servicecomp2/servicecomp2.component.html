@@ -1,0 +1,9 @@
+
+<div class="container"><br>
+    <p>servicecomp2 works!</p>
+    <!-- <button (click)="Onsubscribe()">Subscribe</button> same code are repeated & breaking that principle (do not repeate yourself) -->
+    <ng-container *ngFor="let product of productss">
+        Product Id: <strong class="text-success">{{product.id}}</strong>
+        Product Name: <strong class="text-success">{{product.name}}</strong><br>
+    </ng-container>
+</div>

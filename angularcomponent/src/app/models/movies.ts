@@ -10,3 +10,8 @@ export class Courses{
     duration:string;
     salary:string;
 }
+export class Transfer{
+    fname:string;
+    lname:string;
+    education:string;
+}

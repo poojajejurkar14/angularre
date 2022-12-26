@@ -1,0 +1,31 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px brown;
+}
+
+label {
+    font-weight: bolder;
+}
+.r2{
+    text-align: center;
+    margin-left: 120px;
+    font-weight: bolder;
+}
+.r2{
+    font-weight: bolder;
+}
+
+.r1 {
+    border-bottom: 1px dashed black;
+    margin-bottom: 20px;
+}
+.s1{
+    /* background-color: rgb(138, 189, 223); */
+    background-image: url("C:\Users\Smart\Desktop\Angular\bin\bgimg4.jpg");
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+}
+.g1{
+    color: black;
+}

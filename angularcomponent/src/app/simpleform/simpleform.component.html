@@ -1,141 +1,57 @@
-<!-- <div class="container">
-     <div class="row justify-vontent-center">
-        <div class="col-md-6 text-left rounded">
-            <form (ngSubmit)="OnSubmit(myForm)"#myForm="ngForm">
-                <div class="form-group">
-                    <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter email" ngModel required>
-                  </div>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="Email" email name="Email" placeholder="Enter email" ngModel required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="Password1" placeholder="Password"ngModel>
-                </div>
-                <div class="form-group">
-                    <label for="course">Select Course</label>
-                    <select name="course" id="course">
-                        <option value="Angular">Angular</option>
-                        <option value="HTML">HTML</option>
-                        <option value="J">Angular</option>
-                    </select>
-                </div>
-                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
-              </form>
-            
-        </div>
-    </div>
-</div> -->
-
-
-
-<!-- Assignment -->
-
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-12 col-lg-9 col-xl-7">
-        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-            <form (ngSubmit)="OnSubmit(myForm)"#myForm="ngForm">
-
-              <div class="row">
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" />
-                    <label class="form-label" for="firstName" aria-required="true">First Name</label>
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" />
-                    <label class="form-label" for="lastName">Last Name</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 mb-4 d-flex align-items-center">
-
-                  <div class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Birthday</label>
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4">
-
-                  <h6 class="mb-2 pb-1">Gender: </h6>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                      value="option1" checked />
-                    <label class="form-check-label" for="femaleGender">Female</label>
-                  </div>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                      value="option2" />
-                    <label class="form-check-label" for="maleGender">Male</label>
-                  </div>
-
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                      value="option3" />
-                    <label class="form-check-label" for="otherGender">Other</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 mb-4 pb-2">
-
-                  <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                    <label class="form-label" for="emailAddress">Email</label>
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-
-                  <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                    <label class="form-label" for="phoneNumber">Phone Number</label>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-
-                  <select class="select form-control-lg">
-                    <option value="1" disabled>Choose option</option>
-                    <option value="2">Subject 1</option>
-                    <option value="3">Subject 2</option>
-                    <option value="4">Subject 3</option>
-                  </select>
-                  <label class="form-label select-label">Choose option</label>
-
-                </div>
-              </div>
-
-              <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" [disabled]="!myForm.valid" type="submit" value="Submit" />
-              </div>
-
-            </form>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded shadow py-4">
+      <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+        <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required placeholder="Enter username"
+              [(ngModel)]="username">
+            <small [(ngModel)]="username" *ngIf="username">User name is: {{username}}</small>
           </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email" #email="ngModel" email name="email" required
+              placeholder="Enter email" ngModel>
+            <small class="text-danger" *ngIf="!email.valid && email.touched">Enter valid email address</small>
+          </div>
+          <small class="text-danger" *ngIf="!userDetails.valid && userDetails.touched">Please valid details</small>
         </div>
+        <div class="form-group">
+          <label for="course">Select course</label>
+          <select name="course" class="form-control" id="course" [ngModel]="defaultValue">
+            <option value="Angular">Angular</option>
+            <option value="Javascript">Javascript</option>
+            <option value="React">React</option>
+          </select>
+        </div>
+        <div>
+          <!-- <div class="example-full-width">
+            <label for="date">Date</label>
+            <input type="date" name="date" id='date'  [min]="minDate" [max]="maxDate"  placeholder="Choose a date">
+            
+          </div> -->
+          </div>
+        <div class="form-group">Gender</div>
+        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+          <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender"
+            class="custom-control-input">
+          <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+        </div>
+        
+    
+    <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+    <div class="row justify-content-center mt-2" *ngIf="submitted">
+      <div class="col-md-7 rounded shadow py-4">
+        <h2 class="text-primary">Form Data</h2>
+        <p>Username:<strong> {{employee.username}}</strong></p>
+        <p>Email:<strong> {{employee.email}}</strong></p>
+        <p>Course:<strong> {{employee.course}}</strong></p>
+        <p>Gender:<strong> {{employee.gender}}</strong></p>
       </div>
     </div>
+    </form>
   </div>
-</section>
+  
+</div>
+</div>

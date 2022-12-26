@@ -1,0 +1,14 @@
+label{
+    font-weight: bolder;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px brown;
+}
+.s1{
+    /* background-color: rgb(138, 189, 223); */
+    background-image: url("C:\Users\Smart\Desktop\Angular\bin\bgimg.jpg");
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+}

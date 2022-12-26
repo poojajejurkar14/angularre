@@ -13,7 +13,37 @@
 <p appCustomdirective>Custom Paragraph</p>
 <div appCustomdirective>Custom directive div</div>
 
-<!-- Assignment -->
+
+<!------------------------ 7th lecture --------------------------------->
+<h4>Template reference variable :-</h4>
+<div style="margin-left: 200px; margin-top: 5px;">
+    <!-- <input type="text"id=""name="" #username (keyup.enter)="show(username.value)">  -->
+    <input type="text" id="" name="" #username>
+</div>
+<!-- jr button vr apply krayche asel tr  -->
+<button (click)="show(username.value)">show</button>
+<div>{{uname}}</div>
+{{myinputmsg}}
+
+<h4>Transfer the data from one component to another component</h4> <!---child component(demodirective.component.ts)---->
+<app-demodirectives [myinputmsg]="uname"></app-demodirectives> <!---parent component---->
+
+<!------------------------ 8th lecture(practice) --------------------------------->
+<h4>Template reference variable :-</h4>
+<div style="margin-left: 200px; margin-top: 5px;">
+    <input type="text" id="" name="" #username>
+</div>
+<!-- jr button vr apply krayche asel tr -->
+<button (click)="show(username.value)">Click</button>
+<div>{{uname}}</div>
+
+
+<h4>Transfer the data from one component to another component</h4> <!---child component(demodirective.component.ts)---->
+<div *ngFor="let e of EmployeeRecord">
+<app-demodirectives [employee]="e"></app-demodirectives> <!---parent component---->
+</div>
+
+<!-- Assignment 6th lect -->
 <div>
     <h2 class="text-center mt-5 bg-secondary">Directive Assignment</h2>
 </div>
@@ -36,7 +66,7 @@
             <table>
                 <tr>
                     <td>
-                    <label><b>Password :</b></label>
+                        <label><b>Password :</b></label>
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +77,7 @@
                 </tr>
                 <tr>
                     <input type="password" appConfirmValidation="password" class="col-md-12 s1">
-                    <!-- <span>not match</span> -->
+
                 </tr>
                 <tr>
                     <input type="submit" class="text-center p-2 mt-3 s2">
