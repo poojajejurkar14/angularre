@@ -1,1 +1,26 @@
-<p>filterpipe works!</p>
+<div class="row justify-content-center">
+    <div class="col-md-8 mt-2 form-inline">
+        <label for="productid">Search by product</label>&nbsp;&nbsp;
+        <input type="text" id="productid" placeholder="enter the productid" class="form-control" [(ngModel)]="namesearch">
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sno</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Availibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productarr | filter:namesearch">
+                    <td scope="row">{{product.Sno}}</td>
+                    <td scope="row">{{product.Name}}</td>
+                    <td scope="row">{{product.Prise}}</td>
+                    <td scope="row">{{product.Availibility}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

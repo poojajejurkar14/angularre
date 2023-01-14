@@ -14,15 +14,20 @@
   <app-comp4></app-comp4> -->
   <!-- <app-emp1></app-emp1>
   <app-emp2></app-emp2> -->
-  <app-pipedemo></app-pipedemo>
+ 
+
+  
+  <!-- <app-pipedemo></app-pipedemo> -->
+  <!-- <app-filterpipe></app-filterpipe> -->
 </div>
 <!-- <app-ngswitch></app-ngswitch> -->
 <!-- <app-demodirectives></app-demodirectives> -->
-
+<!-- <app-custom-directive-assignment></app-custom-directive-assignment> -->
 <!-- <app-servers></app-servers>
-<app-structuraldirectives></app-structuraldirectives>
-<app-attribute></app-attribute> 
-<app-parent></app-parent> -->
+<app-structuraldirectives></app-structuraldirectives>-->
+ <!-- <app-attribute></app-attribute>  -->
+<!-- <app-parent></app-parent> -->
+
 <!-- <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
@@ -38,7 +43,7 @@
 
 <!-- <app-server></app-server> -->
 <!-- <app-servers></app-servers> -->
-<!-- <router-outlet></router-outlet> -->
+
 <!-- <warn-app></warn-app> -->
 <!-- <app-alert></app-alert> -->
 <!-- <app-simpleform></app-simpleform> -->
@@ -48,3 +53,17 @@
 <!-- <app-reactiveform></app-reactiveform> -->
 <!-- <app-servicecomp1></app-servicecomp1>
 <app-servicecomp2></app-servicecomp2> -->
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <!-- using href attribute same tab madhe page load hote so we use routerLink -->
+      <!--  [routerLinkActiveOptions]="{exact:true}" -->
+      <li class="nav-item"><a routerLink="home/"  class="nav-link" routerLinkActive="active">Home</a></li>
+      <li class="nav-item"><a routerLink="aboutus/" class="nav-link" routerLinkActive="active myclass">About Us</a></li>
+      <li class="nav-item"> <a routerLink="contactus/" class="nav-link" routerLinkActive="active myclass">Contact Us</a></li>
+      <li class="nav-item"> <a routerLink="product/" class="nav-link" routerLinkActive="active">Product</a></li> 
+      <li class="nav-item"><a routerLink="portfolio/" class="nav-link" routerLinkActive="active">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>

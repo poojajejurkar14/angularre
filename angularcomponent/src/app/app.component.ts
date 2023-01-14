@@ -7,6 +7,7 @@ import { UtilityService } from './services/utility.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+ 
   constructor(private _utilityService:UtilityService){
 
   }

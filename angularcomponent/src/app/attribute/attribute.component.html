@@ -1,5 +1,5 @@
 <div [ngStyle]="{'color':colorVal,'background-color':'#ddd'}">Learning angular 8</div>
-<!--add one or more valuse -->
+<!-- < add one or more values> -->
 <h4>Ng Class</h4>
 <ul *ngFor="let person of people">
     <li [ngClass]="{
@@ -16,8 +16,8 @@
 
 <!------------------------ 7th lecture --------------------------------->
 <h4>Template reference variable :-</h4>
-<div style="margin-left: 200px; margin-top: 5px;">
-    <!-- <input type="text"id=""name="" #username (keyup.enter)="show(username.value)">  -->
+<div style="margin-left: 150px; margin-top: 5px;"> 
+    <input type="text"id=""name="" #username (keyup.enter)="show(username.value)"> 
     <input type="text" id="" name="" #username>
 </div>
 <!-- jr button vr apply krayche asel tr  -->
@@ -25,64 +25,21 @@
 <div>{{uname}}</div>
 {{myinputmsg}}
 
-<h4>Transfer the data from one component to another component</h4> <!---child component(demodirective.component.ts)---->
-<app-demodirectives [myinputmsg]="uname"></app-demodirectives> <!---parent component---->
+<h4>Transfer the data from one component to another component</h4> <!--child component(demodirective.component.ts)-->
+<app-demodirectives [myinputmsg]="uname"></app-demodirectives> <!--parent component-->
 
 <!------------------------ 8th lecture(practice) --------------------------------->
-<h4>Template reference variable :-</h4>
+<!-- <h4>Template reference variable :-</h4>
 <div style="margin-left: 200px; margin-top: 5px;">
     <input type="text" id="" name="" #username>
-</div>
+</div> -->
 <!-- jr button vr apply krayche asel tr -->
-<button (click)="show(username.value)">Click</button>
+<!-- <button (click)="show(username.value)">Click</button>
 <div>{{uname}}</div>
 
 
-<h4>Transfer the data from one component to another component</h4> <!---child component(demodirective.component.ts)---->
-<div *ngFor="let e of EmployeeRecord">
-<app-demodirectives [employee]="e"></app-demodirectives> <!---parent component---->
-</div>
+<h4>Transfer the data from one component to another component</h4> -child component(demodirective.component.ts)-- -->
+<!-- <div *ngFor="let e of EmployeeRecord">
+<app-demodirectives [employee]="e"></app-demodirectives> -parent component>
+</div>               -->
 
-<!-- Assignment 6th lect -->
-<div>
-    <h2 class="text-center mt-5 bg-secondary">Directive Assignment</h2>
-</div>
-<div class="container">
-
-    <div class="row text-center">
-        <div class="col-md-6  bg-secondary">
-            <h4 class="p-2">Attribute Directive</h4>
-            <p class="font-weight-bold">Most popular position in IT</p>
-            <ul>
-                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Software Engineer</li>
-                <li class="text-left p-2 text-white font-weight-bold">Product Manager</li>
-                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Full-stack Developer </li>
-                <li class="text-left p-2 text-white font-weight-bold">Database Manager</li>
-                <li appCustomdirective class="text-left p-2 text-white font-weight-bold">Devops Engineer</li>
-            </ul>
-        </div>
-        <div class="col-md-6 heading">
-            <h4 class="p-2">Custom Directive</h4>
-            <table>
-                <tr>
-                    <td>
-                        <label><b>Password :</b></label>
-                    </td>
-                </tr>
-                <tr>
-                    <input type="password" class="col-md-12 s1">
-                </tr>
-                <tr>
-                    <label class="c1"><b>Confirm Password :</b></label>
-                </tr>
-                <tr>
-                    <input type="password" appConfirmValidation="password" class="col-md-12 s1">
-
-                </tr>
-                <tr>
-                    <input type="submit" class="text-center p-2 mt-3 s2">
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>

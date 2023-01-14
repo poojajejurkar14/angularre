@@ -31,8 +31,20 @@ import { Emp1Component } from './emp1/emp1.component';
 import { Emp2Component } from './emp2/emp2.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
-import { FilterpipePipe } from './filterpipe.pipe';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { CustomDirectiveAssignmentComponent } from './custom-directive-assignment/custom-directive-assignment.component';
+import { FilterPipe } from './filter.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { TvComponent } from './product/tv/tv.component';
+import { WashingMachineComponent } from './product/washing-machine/washing-machine.component';
+import { TabletComponent } from './product/tablet/tablet.component';
 
 @NgModule({
   declarations: [
@@ -63,8 +75,20 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
     Emp2Component,
     PipedemoComponent,
     CountPipe,
-    FilterpipePipe,
-    FilterpipeComponent,
+    FilterpipeComponent,    
+    CustomDirectiveAssignmentComponent,
+    FilterPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginComponent,
+    PortfolioComponent,
+    PagenotfoundComponent,
+    MobileComponent,
+    TvComponent,
+    WashingMachineComponent,
+    TabletComponent,
     
   ],
   imports: [

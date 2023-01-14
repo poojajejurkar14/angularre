@@ -12,7 +12,6 @@ emp;
     this.employeeService.emp.subscribe(res =>{
       this.emp=res;
      console.log(res);
-     
     })
    }
 
